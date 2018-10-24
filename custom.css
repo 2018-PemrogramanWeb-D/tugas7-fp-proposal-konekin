@@ -1,0 +1,14 @@
+.jumbotron{
+    background-color: blueviolet;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0px;
+}
+
+.display-6{
+    color: #ffffff;
+}
+
+.lead{
+    color: #ffffff;
+}
