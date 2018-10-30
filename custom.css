@@ -1,14 +1,29 @@
 .jumbotron{
-    background-color: blueviolet;
+    background-color: #540d6e;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-bottom: 0px;
     border-radius: 0px;
 }
 
 .display-6{
-    color: #ffffff;
+    color: #f3fcf0;
 }
 
 .lead{
-    color: #ffffff;
+    color: #f3fcf0;
+}
+
+.navbar{
+    padding-top: 10px;
+    margin-top: 0px;
+    background-color: #ffd23f;
+}
+
+.navbar-brand{
+    color: #f3fcf0;
+}
+
+.nav-link{
+    color: #f3fcf0;
 }
