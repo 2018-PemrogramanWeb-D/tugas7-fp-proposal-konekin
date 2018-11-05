@@ -1,0 +1,40 @@
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<style>
+		.button{
+			margin-left:15px;
+			text-align:center;
+			border: 1px solid #ccc;
+			cursor:pointer;
+			border-radius:4px;
+			padding: 8px 70px;
+			background-color:#ff9900;
+			color:#000000;
+			text-decoration:none;
+			transition-duration:0.4s;
+			font-family:montserrat;
+		}
+		
+		.button:hover{
+			background-color:#ffffff;
+			border-color:#ff9900;
+			color:#000000;
+		}
+		
+	</style>
+	<title id="pageTitle">konekin.</title>
+</head>	
+<body>
+	<div style="margin-left:200px;margin-top:150px;margin-right:800px;background-color:#ffffff;border: 3px solid #cccc;border-radius:25px;border-color:white;">
+		<div style="margin-left:25px;margin-top:10px;margin-bottom:10px;">
+				<h1 align="left" style="margin-left:-50px;display:inline;font-family:montserrat;font-size:80px">konekin.</h1>
+				<p style="margin-left:30px;font-family:courier;">Connect me, pls</p><br><br><br>
+			<form>
+				<a href="#" class="button" >Login</a><br><br><br>
+				<a href="#" class="button" style="padding:8px 61px;">Sign Up</a>				
+			</form>
+		</div>
+	</div>
+</body>
+</html>
