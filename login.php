@@ -1,32 +1,51 @@
 <html>
 <head>
-<meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Konekin</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="custom.css">
-
-
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<style>
+		.button{
+			margin-left:15px;
+			text-align:center;
+			border: 1px solid #ccc;
+			cursor: pointer;
+			border-radius:4px;
+			padding: 8px 70px;
+			background-color:#ff9900;
+			color:#000000;
+			text-decoration:none;
+			transition-duration:0.4s;
+			font-family:montserrat;
+		}
+		
+		.button:hover{
+			background-color:#ffffff;
+			border-color:#ff9900;
+			color:#000000;
+		}
+        
+        .input{
+            border: none;
+            border-bottom: 1px solid #000000;
+        }
+        
+	</style>
+	<title id="pageTitle">konekin.</title>
 </head>	
-<body style="background-image: url(background-login.png); ">
-	<div class="container" style="margin-top: 50px;">
-		<h1 style="font-size: 100px;">konekin.</h1>
-		<p style="font-size: 20px;">Connect me, pls</p><br><br><br><br><br><br>
-	</div>
-	<div class="container">
-		<div class="form-group">
-			<span class="col-lg">
-				<button type="button" class="btn btn-sample">Log In</button>
-			</span>
-			
-			<span class="col-lg">
-				<button type="button" class="btn btn-sample">Sign In</button>
-			</span>	
-		</form>
+<body>
+	<div style="margin-left:200px; margin-top:50px; margin-right:800px; background-color:#ffffff; border: 3px solid #cccc; border-radius:25px; border-color:white;">
+		<div style="margin-left:25px; margin-top:10px; margin-bottom:10px;">
+            <h1 align="left" style="margin-left:-50px; display:inline; font-family:montserrat; font-size:80px">konekin.</h1>
+            <p style="margin-left:30px; font-family:courier;">Connect me, pls</p><br><br><br>
+
+            <form style="margin-left:25px; margin-top:25px; margin-bottom:10px;">
+                <p style="margin-left:5px; display:inline; font-family:montserrat; font-size:24px">Username :<br></p>
+                <input class="input" name="username" style="margin-left:25px; margin-top:20px; margin-bottom:10px;"><br><br><br>
+                <p style="margin-left:5px; display:inline; font-family:montserrat; font-size:24px">Password :<br></p>
+                <input class="input" name="password" style="margin-left:25px; margin-top:20px; margin-bottom:10px;"><br><br><br>
+            </form>
+			<form style="margin-left:25px; margin-top:100px; margin-bottom:10px;">
+				<a href="#" class="button" >Log In</a><br><br><br>			
+			</form>
+		</div>
 	</div>
 </body>
 </html>
