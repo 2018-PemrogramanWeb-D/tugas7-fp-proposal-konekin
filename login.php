@@ -15,17 +15,21 @@
 <body style="background-image: url(background-login.png); ">
 <div class="container" style="margin-top: 50px;">
     <h1 style="font-size: 100px;">konekin.</h1>
-    <p style="font-size: 20px;">Connect me, pls</p><br><br><br><br><br><br>
+    <p style="font-size: 20px;">Connect me, pls</p><br><br><br>
+    <p style="font-size: 30px;"><b>Log In</b></p>
 </div>
 <div class="container">
-    <div class="form-group">
-			<span class="col-lg">
-				<button type="button" class="btn btn-sample">Log In</button>
-			</span>
-
-        <span class="col-lg">
-				<button type="button" class="btn btn-sample">Sign In</button>
-			</span>
+    <div class="row">
+        <form class="col-4">
+            <div class="form-group">
+                <label for="username">Username :</label>
+                <input type="text" class="form-control" id="username" placeholder="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password :</label>
+                <input type="text" class="form-control" id="password" placeholder="password">
+            </div>
+            <button type="submit" class="btn btn-sample">Log in</button>
         </form>
     </div>
 </body>
