@@ -18,14 +18,14 @@
 
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-6">Konekin</h1>
+            <a href="home.php" h1 class="display-6">Konekin</h1>
         </div>
     </div>
     
     
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a href = "home.php"class="navbar-brand" href="#">Home</a>
+            <a href = "home.php" class="navbar-brand" href="#">Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
