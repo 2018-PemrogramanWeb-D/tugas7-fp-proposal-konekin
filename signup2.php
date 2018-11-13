@@ -15,20 +15,34 @@
 <body style="background-image: url(background-login.png); ">
 <div class="container" style="margin-top: 50px;">
     <h1 style="font-size: 100px;">konekin.</h1>
-    <p style="font-size: 20px;">Connect me, pls</p><br><br><br>
-    <p style="font-size: 30px;"><b>Log In</b></p>
+    <p style="font-size: 20px;">Connect me, pls</p><br>
+    <p style="font-size: 30px;"><b>Sign Up</b></p>
 </div>
 <div class="container">
     <div class="row">
         <form class="col-4">
             <div class="form-group">
-                <label for="username">Username :</label>
+                <label for="fullname">Full Name :</label>
                 <input type="text" class="form-control" id="username" placeholder="username">
             </div>
             <div class="form-group">
-                <label for="password">Password :</label>
+                <label for="email">Email :</label>
                 <input type="text" class="form-control" id="password" placeholder="password">
             </div>
+            <label for="gender">Gender :</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="genderMale" value="M">
+                <label class="form-check-label" for="genderMale">
+                    Male
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="F">
+                <label class="form-check-label" for="genderFemale">
+                    Female
+                </label>
+            </div>
+            <br><br>
             <button type="submit" class="btn btn-sample">Log in</button>
         </form>
     </div>
