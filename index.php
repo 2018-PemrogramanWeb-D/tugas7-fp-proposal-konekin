@@ -12,7 +12,7 @@
 
 
 </head>	
-<body style="background-image: url(background-login.png); ">
+<body style="background-image: url(background-login.png);">
 	<div class="container" style="margin-top: 50px;">
 		<h1 style="font-size: 100px;">konekin.</h1>
 		<p style="font-size: 20px;">Connect me, pls</p><br><br><br><br><br><br>
@@ -25,7 +25,7 @@
 			
 			<span class="col-lg">
 				<button type="button" class="btn btn-sample" onclick="redirSignup()">Sign Up</button>
-			</span>	
+			</span>
 		</form>
 	</div>
     <script src="custom.js"></script>
