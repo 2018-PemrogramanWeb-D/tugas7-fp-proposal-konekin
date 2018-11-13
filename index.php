@@ -20,13 +20,15 @@
 	<div class="container">
 		<div class="form-group">
 			<span class="col-lg">
-				<button type="button" class="btn btn-sample">Log In</button>
+				<button type="button" class="btn btn-sample" onclick="redirLogin()">Log In</button>
 			</span>
 			
 			<span class="col-lg">
-				<button type="button" class="btn btn-sample">Sign In</button>
+				<button type="button" class="btn btn-sample" onclick="redirSignup()">Sign Up</button>
 			</span>	
 		</form>
 	</div>
+    <script src="custom.js"></script>
+
 </body>
 </html>
