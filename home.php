@@ -36,15 +36,16 @@
                     <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Faculties</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown07">
                             <h1 class="dropdown-header">Faculties</h1>
-                            <a class="dropdown-item" href="#">Science</a>
-                            <a class="dropdown-item" href="#">Industrial Technology</a>
-                            <a class="dropdown-item" href="#">Electrical Technology</a>
-                            <a class="dropdown-item" href="#">Civil, Environmental, and Geo Engineering</a>
-                            <a class="dropdown-item" href="#">Architecture, Design, and Planning</a>
-                            <a class="dropdown-item" href="#">Marine Technology</a>
-                            <a class="dropdown-item" href="#">Mathematics, Computation, and Data Science</a>
-                            <a class="dropdown-item" href="#">Information and Communication Technology</a>
-                            <a class="dropdown-item" href="#">Business and Technology Management</a>
+                            <a class="dropdown-item" href="#">FIA</a>
+                            <a class="dropdown-item" href="#">FTI</a>
+                            <a class="dropdown-item" href="#">FTE</a>
+                            <a class="dropdown-item" href="#">FTSLK</a>
+                            <a class="dropdown-item" href="#">FADP</a>
+                            <a class="dropdown-item" href="#">FTK</a>
+                            <a class="dropdown-item" href="#">FMKSD</a>
+                            <a class="dropdown-item" href="#">FTIK</a>
+                            <a class="dropdown-item" href="#">FBMT</a>
+                            <a class="dropdown-item" href="#">FV</a>
                         </div>
                 </li>
                 <li class="nav-item dropdown">

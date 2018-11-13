@@ -7,46 +7,86 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
-
+    
     <link rel="stylesheet" href="custom.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
 
 </head>
-<body style="background-image: url(background-login.png); ">
+<body style="background-image: url(background-login.png);" >
 <div class="container" style="margin-top: 50px;">
     <h1 style="font-size: 100px;">konekin.</h1>
     <p style="font-size: 20px;">Connect me, pls</p><br>
-    <p style="font-size: 30px;"><b>Sign Up</b></p>
+    <p style="font-size: 30px;"><b>Daftar</b></p>
 </div>
 <div class="container">
     <div class="row">
-        <form class="col-4">
+        <form class="col-4" action="signup.php">
+
             <div class="form-group">
-                <label for="fullname">Full Name :</label>
-                <input type="text" class="form-control" id="username" placeholder="username">
+                <label for="namaLengkap">Nama Lengkap :</label>
+                <input type="text" class="form-control" id="namaLengkap" placeholder="nama lengkap">
             </div>
+
             <div class="form-group">
-                <label for="email">Email :</label>
-                <input type="text" class="form-control" id="password" placeholder="password">
+                <label for="nrp">NRP :</label>
+                <input type="text" class="form-control" id="nrp" placeholder="nrp">
             </div>
+            
             <label for="gender">Gender :</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="genderMale" value="M">
-                <label class="form-check-label" for="genderMale">
-                    Male
+                <input class="form-check-input" type="radio" name="gender" id="genderLaki" value="L">
+                <label class="form-check-label" for="genderLaki">
+                    Laki-laki
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="F">
-                <label class="form-check-label" for="genderFemale">
-                    Female
+                <input class="form-check-input" type="radio" name="gender" id="genderPerempuan" value="P">
+                <label class="form-check-label" for="genderPerempuan">
+                    Perempuan
                 </label>
             </div>
-            <br><br>
-            <button type="submit" class="btn btn-sample">Log in</button>
+
+            <br>
+
+            <div class="form-group">
+                <label for="fakultas">Fakultas :</label>
+                <select class="form-control" id="fakultas">
+                    <option value="1">Ilmu Alam</option>
+                    <option value="2">Teknologi Industri</option>
+                    <option value="3">Teknologi Elektro</option>
+                    <option value="4">Teknik Sipil, Lingkungan, dan Kebumian</option>
+                    <option value="5">Arsitektur, Desain, dan Perencanaan</option>
+                    <option value="6">Teknologi Kelautan</option>
+                    <option value="7">Matematika, Komputasi, dan Sains Data</option>
+                    <option value="8">Teknologi Informasi dan Komunikasi</option>
+                    <option value="9">Bisnis dan Manajemen Teknologi</option>
+                    <option value="10">Vokasi</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="uname">Username :</label>
+                <input type="text" class="form-control" id="uname" placeholder="username">
+            </div>
+
+            <div class="form-group">
+                <label for="pass1">Password :</label>
+                <input type="text" class="form-control" id="pass1" placeholder="password">
+            </div>
+
+            <div class="form-group">
+                <label for="pass2">Confirm password :</label>
+                <input type="text" class="form-control" id="pass2" placeholder="confirm password">
+            </div>
+
+            <button type="submit" class="btn btn-sample">Daftar</button>
+
         </form>
     </div>
 </div>
+
 <script>
     var x, i, j, selElmnt, a, b, c;
     /*look for any elements with the class "custom-select":*/

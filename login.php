@@ -16,7 +16,7 @@
 <div class="container" style="margin-top: 50px;">
     <h1 style="font-size: 100px;">konekin.</h1>
     <p style="font-size: 20px;">Connect me, pls</p><br><br><br>
-    <p style="font-size: 30px;"><b>Log In</b></p>
+    <p style="font-size: 30px;"><b>Masuk</b></p>
 </div>
 <div class="container">
     <div class="row">
@@ -29,7 +29,7 @@
                 <label for="password">Password :</label>
                 <input type="text" class="form-control" id="password" placeholder="password">
             </div>
-            <button type="submit" class="btn btn-sample">Log in</button>
+            <button type="submit" class="btn btn-sample">Masuk</button>
         </form>
     </div>
 </body>

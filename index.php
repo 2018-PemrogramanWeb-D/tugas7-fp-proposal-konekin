@@ -9,7 +9,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="custom.css">
-
+    <script src="custom.js"></script>
 
 </head>	
 <body style="background-image: url(background-login.png);">
@@ -20,15 +20,14 @@
 	<div class="container">
 		<div class="form-group">
 			<span class="col-lg">
-				<button type="button" class="btn btn-sample" onclick="redirLogin()">Log In</button>
+				<button type="button" class="btn btn-sample" onclick="redirLogin()">Masuk</button>
 			</span>
 			
 			<span class="col-lg">
-				<button type="button" class="btn btn-sample" onclick="redirSignup()">Sign Up</button>
+				<button type="button" class="btn btn-sample" onclick="redirSignup()">Daftar</button>
 			</span>
 		</form>
 	</div>
-    <script src="custom.js"></script>
 
 </body>
 </html>
