@@ -84,7 +84,10 @@
             </div>
 
             <button type="submit" class="btn btn-sample" name="daftar">Daftar</button>
-
+            <br><br><br>
+            <p>
+                Sudah terdaftar? <a href="login.php">Masuk</a>
+            </p>
         </form>
     </div>
 </div>

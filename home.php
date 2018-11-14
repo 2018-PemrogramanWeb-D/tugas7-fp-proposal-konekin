@@ -61,29 +61,32 @@
                             <a class="dropdown-item" href="#">FV</a>
                         </div>
                 </li>
-                <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Departments</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown07">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                    </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
                 </li>
             </ul>
             
-            <?php  if (isset($_SESSION['username'])) : ?>
-                <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-                <p> <a href="home.php?logout='1'" style="color: red;">logout</a> </p>
+            <?php if (isset($_SESSION['username'])) : ?>
+                <p>Welcome,</p>
+                <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Departments</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown07">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                
+                
+                
+                
+                <?php echo $_SESSION['username']; ?>
+                <p> <a href="home.php?logout='1'" style="color: #5a006a;">logout</a> </p>
             <?php endif ?>
 
             </div>
         </div>
     </nav>
 
-
+!
 
 
     <div class="container">

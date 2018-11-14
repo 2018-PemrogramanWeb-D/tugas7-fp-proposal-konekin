@@ -31,7 +31,12 @@
                 <label for="password">Password :</label>
                 <input type="password" class="form-control" name="password" id="password" placeholder="password">
             </div>
+            
             <button type="submit" class="btn btn-sample" name="masuk">Masuk</button>
+            <br><br><br>
+            <p>
+                Belum terdaftar? <a href="signup.php">Daftar</a>
+            </p>
         </form>
     </div>
 </body>
