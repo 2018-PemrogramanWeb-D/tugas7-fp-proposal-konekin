@@ -1,3 +1,5 @@
+<?php include('server.php') ?>
+
 <html>
 <head>
     <meta charset="utf-8" />
@@ -26,23 +28,23 @@
 
             <div class="form-group">
                 <label for="namaLengkap">Nama Lengkap :</label>
-                <input type="text" class="form-control" id="namaLengkap" placeholder="nama lengkap">
+                <input type="text" class="form-control" name="fullname" id="fullname" value="<?php echo $fullname; ?>" placeholder="nama lengkap">
             </div>
 
             <div class="form-group">
                 <label for="nrp">NRP :</label>
-                <input type="text" class="form-control" id="nrp" placeholder="nrp">
+                <input type="text" class="form-control" name="nrp" id="nrp" value="<?php echo $nrp; ?>" placeholder="nrp">
             </div>
             
             <label for="gender">Gender :</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="genderLaki" value="L">
+                <input class="form-check-input" type="radio" name="gender" id="genderLaki" value="<?php echo $gender; ?>">
                 <label class="form-check-label" for="genderLaki">
                     Laki-laki
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="genderPerempuan" value="P">
+                <input class="form-check-input" type="radio" name="gender" id="genderPerempuan" value="<?php echo $gender; ?>">
                 <label class="form-check-label" for="genderPerempuan">
                     Perempuan
                 </label>
@@ -68,20 +70,20 @@
 
             <div class="form-group">
                 <label for="uname">Username :</label>
-                <input type="text" class="form-control" id="uname" placeholder="username">
+                <input type="text" class="form-control" name="username" id="username" placeholder="username">
             </div>
 
             <div class="form-group">
                 <label for="pass1">Password :</label>
-                <input type="text" class="form-control" id="pass1" placeholder="password">
+                <input type="password" class="form-control" name="pass1" id="pass1" placeholder="password">
             </div>
 
             <div class="form-group">
                 <label for="pass2">Confirm password :</label>
-                <input type="text" class="form-control" id="pass2" placeholder="confirm password">
+                <input type="password" class="form-control" name="pass2" id="pass2" placeholder="confirm password">
             </div>
 
-            <button type="submit" class="btn btn-sample">Daftar</button>
+            <button type="submit" class="btn btn-sample" name="daftar">Daftar</button>
 
         </form>
     </div>
