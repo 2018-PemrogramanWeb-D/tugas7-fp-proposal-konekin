@@ -1,3 +1,4 @@
+<?php include('server.php'); ?>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -20,16 +21,17 @@
 </div>
 <div class="container">
     <div class="row">
-        <form class="col-4">
+        <form class="col-4" method="post" action="login.php">
+            <?php include('errors.php'); ?>
             <div class="form-group">
                 <label for="username">Username :</label>
-                <input type="text" class="form-control" id="username" placeholder="username">
+                <input type="text" class="form-control" name="username" id="username" placeholder="username">
             </div>
             <div class="form-group">
                 <label for="password">Password :</label>
-                <input type="text" class="form-control" id="password" placeholder="password">
+                <input type="password" class="form-control" name="password" id="password" placeholder="password">
             </div>
-            <button type="submit" class="btn btn-sample">Masuk</button>
+            <button type="submit" class="btn btn-sample" name="masuk">Masuk</button>
         </form>
     </div>
 </body>

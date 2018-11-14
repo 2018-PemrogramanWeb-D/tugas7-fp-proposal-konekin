@@ -1,3 +1,16 @@
+<?php 
+    session_start(); 
+
+    if (!isset($_SESSION['username'])) {
+        $_SESSION['msg'] = "You must log in first";
+        header('location: login.php');
+    }
+    if (isset($_GET['logout'])) {
+        session_destroy();
+        unset($_SESSION['username']);
+        header("location: login.php");
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,9 +73,12 @@
                     <a class="nav-link" href="#">About</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-md-0">
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-            </form>
+            
+            <?php  if (isset($_SESSION['username'])) : ?>
+                <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+                <p> <a href="home.php?logout='1'" style="color: red;">logout</a> </p>
+            <?php endif ?>
+
             </div>
         </div>
     </nav>

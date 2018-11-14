@@ -43,7 +43,6 @@ if (isset($_POST['daftar'])) {
         if ($user['nrp'] === $nrp) {
             array_push($errors, "NRP sudah ada");
         }
-        echo "heh";
     }
 
     if (count($errors) == 0) {
@@ -55,9 +54,32 @@ if (isset($_POST['daftar'])) {
         $_SESSION['username'] = $username;
         $_SESSION['success'] = "You are now logged in";
         header('location: home.php');
-        echo "hehef";
     }
-    echo "hehe";
+}
+
+if (isset($_POST['masuk'])) {
+    $username = mysqli_real_escape_string($db, $_POST['username']);
+    $password = mysqli_real_escape_string($db, $_POST['password']);
+
+    if (empty($username)) {
+        array_push($errors, "Username masih kosong");
+    }
+    if (empty($password)) {
+        array_push($errors, "Password masih kosong");
+    }
+
+    if (count($errors) == 0) {
+        $password = md5($password);
+        $query = "SELECT * FROM user WHERE username='$username' AND password='$password'";
+        $results = mysqli_query($db, $query);
+        if (mysqli_num_rows($results) == 1) {
+            $_SESSION['username'] = $username;
+            $_SESSION['success'] = "You are now logged in";
+            header('location: home.php');
+        }else {
+            array_push($errors, "Username/password salah");
+        }
+    }
 }
 
 ?>
