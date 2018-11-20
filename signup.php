@@ -1,3 +1,5 @@
+<?php include('server.php') ?>
+
 <html>
 <head>
     <meta charset="utf-8" />
@@ -22,27 +24,27 @@
 </div>
 <div class="container">
     <div class="row">
-        <form class="col-4" action="signup.php">
-
+        <form class="col-4" method="post" action="signup.php">
+            <?php include('errors.php'); ?>
             <div class="form-group">
                 <label for="namaLengkap">Nama Lengkap :</label>
-                <input type="text" class="form-control" id="namaLengkap" placeholder="nama lengkap">
+                <input type="text" class="form-control" name="fullname" id="fullname" value="<?php echo $fullname; ?>" placeholder="nama lengkap">
             </div>
 
             <div class="form-group">
                 <label for="nrp">NRP :</label>
-                <input type="text" class="form-control" id="nrp" placeholder="nrp">
+                <input type="text" class="form-control" name="nrp" id="nrp" value="<?php echo $nrp; ?>" placeholder="nrp">
             </div>
             
             <label for="gender">Gender :</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="genderLaki" value="L">
+                <input class="form-check-input" type="radio" name="gender" id="genderLaki" value="1">
                 <label class="form-check-label" for="genderLaki">
                     Laki-laki
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="genderPerempuan" value="P">
+                <input class="form-check-input" type="radio" name="gender" id="genderPerempuan" value="2">
                 <label class="form-check-label" for="genderPerempuan">
                     Perempuan
                 </label>
@@ -52,7 +54,7 @@
 
             <div class="form-group">
                 <label for="fakultas">Fakultas :</label>
-                <select class="form-control" id="fakultas">
+                <select class="form-control" name="fakultas" id="fakultas">
                     <option value="1">Ilmu Alam</option>
                     <option value="2">Teknologi Industri</option>
                     <option value="3">Teknologi Elektro</option>
@@ -68,21 +70,24 @@
 
             <div class="form-group">
                 <label for="uname">Username :</label>
-                <input type="text" class="form-control" id="uname" placeholder="username">
+                <input type="text" class="form-control" name="username" id="username" placeholder="username" value="<?php echo $username; ?>">
             </div>
 
             <div class="form-group">
                 <label for="pass1">Password :</label>
-                <input type="text" class="form-control" id="pass1" placeholder="password">
+                <input type="password" class="form-control" name="pass1" id="pass1" placeholder="password">
             </div>
 
             <div class="form-group">
                 <label for="pass2">Confirm password :</label>
-                <input type="text" class="form-control" id="pass2" placeholder="confirm password">
+                <input type="password" class="form-control" name="pass2" id="pass2" placeholder="confirm password">
             </div>
 
-            <button type="submit" class="btn btn-sample">Daftar</button>
-
+            <button type="submit" class="btn btn-sample" name="daftar">Daftar</button>
+            <br><br><br>
+            <p>
+                Sudah terdaftar? <a href="login.php">Masuk</a>
+            </p>
         </form>
     </div>
 </div>
