@@ -9,8 +9,10 @@ $username = "";
 
 $errors = array();
 
+//connect ke database
 $db = mysqli_connect('localhost', 'root', '', 'konekin');
 
+//saat ada yang mau sign up
 if (isset($_POST['daftar'])) {
     
     $fullname = mysqli_real_escape_string($db, $_POST['fullname']);
@@ -21,6 +23,7 @@ if (isset($_POST['daftar'])) {
     $pass1 = mysqli_real_escape_string($db, $_POST['pass1']);
     $pass2 = mysqli_real_escape_string($db, $_POST['pass2']);
 
+    //simple validation
     if (empty($fullname)) { array_push($errors, "Nama lengkap kosong"); }
     if (empty($nrp)) { array_push($errors, "NRP kosong"); }
     if (empty($gender)) { array_push($errors, "Gender kosong"); }
@@ -35,6 +38,7 @@ if (isset($_POST['daftar'])) {
     $result = mysqli_query($db, $user_check_query);
     $user = mysqli_fetch_assoc($result);
 
+    //cek availabilitas
     if ($user) {
         if ($user['username'] === $username) {
             array_push($errors, "Username sudah terpakai");
@@ -45,8 +49,9 @@ if (isset($_POST['daftar'])) {
         }
     }
 
+    //saat proses sign up tidak ada error
     if (count($errors) == 0) {
-        $password = md5($pass1);//encrypt the password before saving in the database
+        $password = md5($pass1);
 
         $query = "INSERT INTO user (fullname, nrp, gender, fakultas, username, password) 
                     VALUES('$fullname', '$nrp', '$gender', '$fakultas', '$username', '$password')";
@@ -57,6 +62,7 @@ if (isset($_POST['daftar'])) {
     }
 }
 
+//saat ada yang mau login
 if (isset($_POST['masuk'])) {
     $username = mysqli_real_escape_string($db, $_POST['username']);
     $password = mysqli_real_escape_string($db, $_POST['password']);

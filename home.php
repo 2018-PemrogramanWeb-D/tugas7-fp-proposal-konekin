@@ -29,64 +29,70 @@
 <body>
     
 
-    <div class="jumbotron">
+    <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <a href="home.php" h1 class="display-6">Konekin</h1>
+            <h1 class="display-4">Konekin</h1>
         </div>
     </div>
     
     
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a href = "home.php" class="navbar-brand" href="#">Home</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse" id="navbarsExample07">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Faculties</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown07">
-                            <h1 class="dropdown-header">Faculties</h1>
-                            <a class="dropdown-item" href="#">FIA</a>
-                            <a class="dropdown-item" href="#">FTI</a>
-                            <a class="dropdown-item" href="#">FTE</a>
-                            <a class="dropdown-item" href="#">FTSLK</a>
-                            <a class="dropdown-item" href="#">FADP</a>
-                            <a class="dropdown-item" href="#">FTK</a>
-                            <a class="dropdown-item" href="#">FMKSD</a>
-                            <a class="dropdown-item" href="#">FTIK</a>
-                            <a class="dropdown-item" href="#">FBMT</a>
-                            <a class="dropdown-item" href="#">FV</a>
-                        </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-            </ul>
-            
-            <?php if (isset($_SESSION['username'])) : ?>
-                <p>Welcome,</p>
-                <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Departments</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown07">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container col-sm-10">
+                <a href = "home.php" class="navbar-brand" href="#">Home</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarsExample07">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Faculties</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown07">
+                                <h1 class="dropdown-header">Faculties</h1>
+                                <a class="dropdown-item" href="#">FIA</a>
+                                <a class="dropdown-item" href="#">FTI</a>
+                                <a class="dropdown-item" href="#">FTE</a>
+                                <a class="dropdown-item" href="#">FTSLK</a>
+                                <a class="dropdown-item" href="#">FADP</a>
+                                <a class="dropdown-item" href="#">FTK</a>
+                                <a class="dropdown-item" href="#">FMKSD</a>
+                                <a class="dropdown-item" href="#">FTIK</a>
+                                <a class="dropdown-item" href="#">FBMT</a>
+                                <a class="dropdown-item" href="#">FV</a>
+                            </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
                 
                 
-                
-                
-                <?php echo $_SESSION['username']; ?>
-                <p> <a href="home.php?logout='1'" style="color: #5a006a;">logout</a> </p>
-            <?php endif ?>
 
+                </div>
             </div>
-        </div>
-    </nav>
+            <div class="container col-sm-2">
+                <?php if (isset($_SESSION['username'])) : ?>
+                    <pre>Welcome,</pre>
+                    <p><?php echo $_SESSION['username']; ?></p>
 
-!
+                    
+                    <div class="btn-group">
+                        <button class="btn btn-sample btn-sm" type="button">
+                            <a href="home.php?logout='1'" style="color: #5a006a;">logout</a>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+
+                <?php endif ?>
+            </div>
+        </nav>
 
 
     <div class="container">
