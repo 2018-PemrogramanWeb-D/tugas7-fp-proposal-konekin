@@ -65,11 +65,22 @@
                 
             <div class="col-sm-10">
                 <h1>About Us</h1>
-                <p>Konekin is Social Media Platform Exclusive for student of Instute Teknologi Sepuluh Nopember. Konekin have two main feature, there are : </p>
-                <h3>1. Post home</h3>
+                <p>Konekin is Social Media Platform Exclusive for student of Institute Teknologi Sepuluh Nopember. Konekin have two main feature, there are : </p>
+                <h5>1. Post home</h5>
                 <p>User can post whatever he want in here. this post will remain unless administator found it violate EULA.</p>
-                <h3>2. Follow Faculty</h3>
+                <h5>2. Follow Faculty</h5>
                 <p>User can follow faculty. After follow one or more Faculty, user will be informed about event that happen at that faculty.</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h5>Contact Person</h5>
+                <p>Irsyad</p>
+                <p>Taufiq</p>
+                <p>Jihad</p>
             </div>
         </div>
 
