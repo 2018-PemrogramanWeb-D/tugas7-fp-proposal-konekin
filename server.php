@@ -80,11 +80,29 @@ if (isset($_POST['masuk'])) {
         $results = mysqli_query($db, $query);
         if (mysqli_num_rows($results) == 1) {
             $_SESSION['username'] = $username;
+            $_SESSION['nrp'] = $nrp;
             $_SESSION['success'] = "You are now logged in";
             header('location: home.php');
         }else {
             array_push($errors, "Username/password salah");
         }
+    }
+}
+
+// masukkan post ke db
+if (isset($_POST['kirim'])){
+    $username = mysqli_real_escape_string($db, $_SESSION['username']);
+    $isi = mysqli_real_escape_string($db, $_POST['isi_post']);
+
+    if (empty($isi)) {
+        array_push($errors, "Gk punya unek2 gk usah ngepost");
+    }
+
+    if (count($errors) == 0) {
+        $query = "INSERT INTO post (id_post, fk_username, isi_post) 
+                    VALUES(NULL, '$username', '$isi')";
+        $result = mysqli_query($db, $query);
+        header('location: home.php');
     }
 }
 

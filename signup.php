@@ -22,6 +22,8 @@
     <p style="font-size: 20px;">Connect me, pls</p><br>
     <p style="font-size: 30px;"><b>Daftar</b></p>
 </div>
+
+<!-- form daftar start-->
 <div class="container">
     <div class="row">
         <form class="col-4" method="post" action="signup.php">
@@ -91,8 +93,9 @@
         </form>
     </div>
 </div>
+<!-- form daftar end-->
 
-<script>
+<!-- <script>
     var x, i, j, selElmnt, a, b, c;
     /*look for any elements with the class "custom-select":*/
     x = document.getElementsByClassName("custom-select");
@@ -165,6 +168,6 @@
     /*if the user clicks anywhere outside the select box,
     then close all select boxes:*/
     document.addEventListener("click", closeAllSelect);
-</script>
+</script> -->
 </body>
 </html>

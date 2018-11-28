@@ -19,6 +19,8 @@
     <p style="font-size: 20px;">Connect me, pls</p><br><br><br>
     <p style="font-size: 30px;"><b>Masuk</b></p>
 </div>
+
+<!-- form masuk start-->
 <div class="container">
     <div class="row">
         <form class="col-4" method="post" action="login.php">
@@ -39,5 +41,7 @@
             </p>
         </form>
     </div>
+</div>
+<!-- form masuk end-->
 </body>
 </html>

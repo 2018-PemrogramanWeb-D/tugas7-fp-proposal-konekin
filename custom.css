@@ -76,3 +76,7 @@ fieldset[disabled] .btn-sample.active {
     color: #812793; 
     background-color: #ffffff; 
 }
+
+.bo {
+    background-image: url("background-login.png") !important;
+}
