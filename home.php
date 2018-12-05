@@ -27,7 +27,7 @@
 </head>
 <body>
     
-
+    <?php $fakultas = 0; ?>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Konekin</h1>
@@ -48,16 +48,16 @@
                         <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Faculties</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown07">
                                 <h1 class="dropdown-header">Faculties</h1>
-                                <a class="dropdown-item" href="#">FIA</a>
-                                <a class="dropdown-item" href="#">FTI</a>
-                                <a class="dropdown-item" href="#">FTE</a>
-                                <a class="dropdown-item" href="#">FTSLK</a>
-                                <a class="dropdown-item" href="#">FADP</a>
-                                <a class="dropdown-item" href="#">FTK</a>
-                                <a class="dropdown-item" href="#">FMKSD</a>
-                                <a class="dropdown-item" href="#">FTIK</a>
-                                <a class="dropdown-item" href="#">FBMT</a>
-                                <a class="dropdown-item" href="#">FV</a>
+                                <a class="dropdown-item" href="home.php?fak=1">FIA</a>
+                                <a class="dropdown-item" href="home.php?fak=2">FTI</a>
+                                <a class="dropdown-item" href="home.php?fak=3">FTE</a>
+                                <a class="dropdown-item" href="home.php?fak=4">FTSLK</a>
+                                <a class="dropdown-item" href="home.php?fak=5">FADP</a>
+                                <a class="dropdown-item" href="home.php?fak=6">FTK</a>
+                                <a class="dropdown-item" href="home.php?fak=7">FMKSD</a>
+                                <a class="dropdown-item" href="home.php?fak=8">FTIK</a>
+                                <a class="dropdown-item" href="home.php?fak=9">FBMT</a>
+                                <a class="dropdown-item" href="home.php?fak=10">FV</a>
                             </div>
                     </li>
                     <li class="nav-item">
@@ -115,15 +115,112 @@
                 </nav>
             </div>
             <?php
-                $query = "SELECT * FROM post ORDER BY created_at DESC";
-                $newsfeed = mysqli_query($db, $query);
+                // SELECT * FROM post ORDER BY created_at DESC
+                //SELECT * FROM post, user WHERE post.fk_username=user.username ORDER BY created_at DESC
+                $queryAll = "SELECT post.id_post, post.fk_username, post.isi_post, user.fakultas, post.created_at FROM post, user WHERE post.fk_username=user.username ORDER BY created_at DESC";
+                $newsfeed = mysqli_query($db, $queryAll);
                 $feed = mysqli_fetch_all($newsfeed);
+
+                $queryFTI
             ?>
             <div class="col-sm-10">
-                <?php foreach($feed as $row): ?>
+                <?php if (isset($_GET['fak'])): ?>
+                    <?php foreach($feed as $row): ?>
+                    <?php if($row[3]==$_GET['fak']): ?>
                     <h1><?php echo $row[1]; ?></h1>
+                    <h4>
+                    <?php
+                        switch ($row[3]) {
+                            case '1':
+                                echo 'FIA';
+                                break;
+                            case '2':
+                                echo 'FTI';
+                                break;
+                            case '3':
+                                echo 'FTE';
+                                break;
+                            case '4':
+                                echo 'FTSLK';
+                                break;
+                            case '5':
+                                echo 'FADP';
+                                break;
+                            case '6':
+                                echo 'FTK';
+                                break;
+                            case '7':
+                                echo 'FMKSD';
+                                break;
+                            case '8':
+                                echo 'FTIK';
+                                break;
+                            case '9':
+                                echo 'FBMT';
+                                break;
+                            case '10':
+                                echo 'FV';
+                                break;
+                            
+                            default:
+                                # code...
+                                break;
+                        }
+                    ?>
+                    </h4>
                     <p><?php echo $row[2]; ?></p>
+                    <?php endif; ?>
                 <?php endforeach; ?>
+
+                    <?php else: ?>
+                        <?php foreach($feed as $row): ?>
+
+                        <h1><?php echo $row[1]; ?></h1>
+                        <h4>
+                        <?php
+                            switch ($row[3]) {
+                                case '1':
+                                    echo 'FIA';
+                                    break;
+                                case '2':
+                                    echo 'FTI';
+                                    break;
+                                case '3':
+                                    echo 'FTE';
+                                    break;
+                                case '4':
+                                    echo 'FTSLK';
+                                    break;
+                                case '5':
+                                    echo 'FADP';
+                                    break;
+                                case '6':
+                                    echo 'FTK';
+                                    break;
+                                case '7':
+                                    echo 'FMKSD';
+                                    break;
+                                case '8':
+                                    echo 'FTIK';
+                                    break;
+                                case '9':
+                                    echo 'FBMT';
+                                    break;
+                                case '10':
+                                    echo 'FV';
+                                    break;
+                                
+                                default:
+                                    # code...
+                                    break;
+                            }
+                        ?>
+                        </h4>
+                        <p><?php echo $row[2]; ?></p>
+
+                    <?php endforeach; ?>
+
+                <?php endif; ?>
             </div>
         </div>
 

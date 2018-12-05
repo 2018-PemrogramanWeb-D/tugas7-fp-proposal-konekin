@@ -106,4 +106,20 @@ if (isset($_POST['kirim'])){
     }
 }
 
+// delete post
+if (isset($_POST['hapus'])){
+    $tobedel = mysqli_real_escape_string($db, $_POST['delpost']);
+
+    if (empty($tobedel)) {
+        array_push($errors, "Gak hapus apa2 dong");
+    }
+
+    if (count($errors) == 0) {
+        $query = "DELETE FROM post WHERE post.id_post = $tobedel";
+        $result = mysqli_query($db, $query);
+        header('location: home.php');
+        echo 'mantap';
+    }
+
+}
 ?>
