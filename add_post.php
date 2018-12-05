@@ -1,15 +1,11 @@
-<?php include('server.php'); ?>
-<?php
+<?php include('server.php') ?>
+<?php 
     if (!isset($_SESSION['username'])) {
         $_SESSION['msg'] = "You must log in first";
         header('location: login.php');
     }
-    if (isset($_GET['logout'])) {
-        session_destroy();
-        unset($_SESSION['username']);
-        header("location: login.php");
-    }
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,33 +37,6 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
-        
-                <div class="collapse navbar-collapse" id="navbarsExample07">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Faculties</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown07">
-                                <h1 class="dropdown-header">Faculties</h1>
-                                <a class="dropdown-item" href="#">FIA</a>
-                                <a class="dropdown-item" href="#">FTI</a>
-                                <a class="dropdown-item" href="#">FTE</a>
-                                <a class="dropdown-item" href="#">FTSLK</a>
-                                <a class="dropdown-item" href="#">FADP</a>
-                                <a class="dropdown-item" href="#">FTK</a>
-                                <a class="dropdown-item" href="#">FMKSD</a>
-                                <a class="dropdown-item" href="#">FTIK</a>
-                                <a class="dropdown-item" href="#">FBMT</a>
-                                <a class="dropdown-item" href="#">FV</a>
-                            </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href = "aboutus.php" a class="nav-link" href="#">About</a>
-                    </li>
-                </ul>
-                
-                
-
-                </div>
             </div>
             <div class="container col-sm-2">
                 <?php if (isset($_SESSION['username'])) : ?>
@@ -114,18 +83,27 @@
                     </ul>
                 </nav>
             </div>
-            <?php
-                $query = "SELECT * FROM post ORDER BY created_at DESC";
-                $newsfeed = mysqli_query($db, $query);
-                $feed = mysqli_fetch_all($newsfeed);
-            ?>
+                
             <div class="col-sm-10">
-                <?php foreach($feed as $row): ?>
-                    <h1><?php echo $row[1]; ?></h1>
-                    <p><?php echo $row[2]; ?></p>
-                <?php endforeach; ?>
+                    <div class="container">
+                        <div class="row">
+                            <form class="col-4" method="post" action="add_post.php">
+                                <br>
+                                <?php include('errors.php'); ?>
+                                <div class="form-group">
+                                    <h3 for="isi">Isi Post :</h3>
+                                    <textarea class="form-control" name="isi_post" id="isi_post" rows="3" placeholder="Ketikkan unek2mu di sini.."></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-sample" name="kirim">Kirim</button>
+                                <br><br><br>
+                            </form>
+                        </div>
+                    </div>
             </div>
         </div>
+
+        
 
     </div>
 
