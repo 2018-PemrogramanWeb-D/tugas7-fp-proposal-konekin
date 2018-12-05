@@ -61,7 +61,7 @@
                             </div>
                     </li>
                     <li class="nav-item">
-                        <a href = "aboutus.php" a class="nav-link" href="#">About</a>
+                        <a href = "aboutus.php" a class="nav-link" href="aboutus.php">About</a>
                     </li>
                 </ul>
                 
@@ -104,12 +104,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="del_post.php">Delete Post</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Disabled</a>
                         </li>
                     </ul>
                 </nav>

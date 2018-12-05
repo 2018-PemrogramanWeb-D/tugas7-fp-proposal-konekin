@@ -25,7 +25,7 @@
     
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a href = "home.php" class="navbar-brand" href="#">Home</a>
+            <a href = "home.php" class="navbar-brand" href="home.php">Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,20 +36,20 @@
                     <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Faculties</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown07">
                             <h1 class="dropdown-header">Faculties</h1>
-                            <a class="dropdown-item" href="#">FIA</a>
-                            <a class="dropdown-item" href="#">FTI</a>
-                            <a class="dropdown-item" href="#">FTE</a>
-                            <a class="dropdown-item" href="#">FTSLK</a>
-                            <a class="dropdown-item" href="#">FADP</a>
-                            <a class="dropdown-item" href="#">FTK</a>
-                            <a class="dropdown-item" href="#">FMKSD</a>
-                            <a class="dropdown-item" href="#">FTIK</a>
-                            <a class="dropdown-item" href="#">FBMT</a>
-                            <a class="dropdown-item" href="#">FV</a>
+                            <a class="dropdown-item" href="home.php?fak=1">FIA</a>
+                            <a class="dropdown-item" href="home.php?fak=2">FTI</a>
+                            <a class="dropdown-item" href="home.php?fak=3">FTE</a>
+                            <a class="dropdown-item" href="home.php?fak=4">FTSLK</a>
+                            <a class="dropdown-item" href="home.php?fak=5">FADP</a>
+                            <a class="dropdown-item" href="home.php?fak=6">FTK</a>
+                            <a class="dropdown-item" href="home.php?fak=7">FMKSD</a>
+                            <a class="dropdown-item" href="home.php?fak=8">FTIK</a>
+                            <a class="dropdown-item" href="home.php?fak=9">FBMT</a>
+                            <a class="dropdown-item" href="home.php?fak=10">FV</a>
                         </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="aboutus.php">About</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-md-0">
