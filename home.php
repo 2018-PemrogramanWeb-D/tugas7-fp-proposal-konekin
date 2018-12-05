@@ -61,7 +61,7 @@
                             </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a href = "aboutus.php" a class="nav-link" href="#">About</a>
                     </li>
                 </ul>
                 
