@@ -40,22 +40,15 @@
             </div>
             <div class="container col-sm-2">
                 <?php if (isset($_SESSION['username'])) : ?>
-                    <pre>Welcome,</pre>
+
+                    <p>Welcome,</p>
                     <p><?php echo $_SESSION['username']; ?></p>
 
-                    
+
                     <div class="btn-group">
-                        <button class="btn btn-sample btn-sm" type="button">
-                            <a href="home.php?logout='1'" style="color: #5a006a;">logout</a>
+                        <button class="btn btn-sample" type="button">
+                            <a href="home.php?logout='1'" style="color: #aaaaaa;">logout</a>
                         </button>
-                        <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
                     </div>
 
                 <?php endif ?>
@@ -63,7 +56,7 @@
         </nav>
 
 
-    <div class="container">
+    <!-- <div class="container"> -->
         <div class="row content">
             <div class="col-sm-2">
                 <nav>
@@ -99,7 +92,7 @@
 
         
 
-    </div>
+    <!-- </div> -->
 
     
 

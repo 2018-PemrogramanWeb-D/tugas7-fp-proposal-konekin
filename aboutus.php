@@ -1,3 +1,15 @@
+<?php include('server.php'); ?>
+<?php
+    if (!isset($_SESSION['username'])) {
+        $_SESSION['msg'] = "You must log in first";
+        header('location: login.php');
+    }
+    if (isset($_GET['logout'])) {
+        session_destroy();
+        unset($_SESSION['username']);
+        header("location: login.php");
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,77 +27,77 @@
 </head>
 <body>
     
-
-    <div class="jumbotron">
+    <?php $fakultas = 0; ?>
+    <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-6">Konekin</h1>
+            <h1 class="display-4">Konekin</h1>
         </div>
     </div>
     
     
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a href = "home.php" class="navbar-brand" href="home.php">Home</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse" id="navbarsExample07">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Faculties</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown07">
-                            <h1 class="dropdown-header">Faculties</h1>
-                            <a class="dropdown-item" href="home.php?fak=1">FIA</a>
-                            <a class="dropdown-item" href="home.php?fak=2">FTI</a>
-                            <a class="dropdown-item" href="home.php?fak=3">FTE</a>
-                            <a class="dropdown-item" href="home.php?fak=4">FTSLK</a>
-                            <a class="dropdown-item" href="home.php?fak=5">FADP</a>
-                            <a class="dropdown-item" href="home.php?fak=6">FTK</a>
-                            <a class="dropdown-item" href="home.php?fak=7">FMKSD</a>
-                            <a class="dropdown-item" href="home.php?fak=8">FTIK</a>
-                            <a class="dropdown-item" href="home.php?fak=9">FBMT</a>
-                            <a class="dropdown-item" href="home.php?fak=10">FV</a>
-                        </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="aboutus.php">About</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-md-0">
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-            </form>
-            </div>
-        </div>
-    </nav>
+        <nav class="navbar navbar-expand-lg">
 
+            <div class="container col-sm-10">
 
-
-
-                
-            <div class="col-sm-10">
-                <h1>About Us</h1>
-                <p>Konekin is Social Media Platform Exclusive for student of Institute Teknologi Sepuluh Nopember. Konekin have two main feature, there are : </p>
-                <h5>1. Post home</h5>
-                <p>User can post whatever he want in here. this post will remain unless administator found it violate EULA.</p>
-                <h5>2. Follow Faculty</h5>
-                <p>User can follow faculty. After follow one or more Faculty, user will be informed about event that happen at that faculty.</p>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h5>Contact Person</h5>
-                <p>Irsyad</p>
-                <p>Taufiq</p>
-                <p>Jihad</p>
-            </div>
-        </div>
-
+                <a href = "home.php" class="navbar-brand" href="home.php">Home</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
         
+                <div class="collapse navbar-collapse" id="navbarsExample07">
 
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Faculties</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdown07">
+                                    <h1 class="dropdown-header">Faculties</h1>
+                                    <a class="dropdown-item" href="home.php?fak=1">FIA</a>
+                                    <a class="dropdown-item" href="home.php?fak=2">FTI</a>
+                                    <a class="dropdown-item" href="home.php?fak=3">FTE</a>
+                                    <a class="dropdown-item" href="home.php?fak=4">FTSLK</a>
+                                    <a class="dropdown-item" href="home.php?fak=5">FADP</a>
+                                    <a class="dropdown-item" href="home.php?fak=6">FTK</a>
+                                    <a class="dropdown-item" href="home.php?fak=7">FMKSD</a>
+                                    <a class="dropdown-item" href="home.php?fak=8">FTIK</a>
+                                    <a class="dropdown-item" href="home.php?fak=9">FBMT</a>
+                                    <a class="dropdown-item" href="home.php?fak=10">FV</a>
+                                </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href = "aboutus.php" a class="nav-link" href="aboutus.php">About</a>
+                        </li>
+                    </ul>
+
+                </div>
+                
+            </div>
+            <div class="container col-sm-2">
+                <?php if (isset($_SESSION['username'])) : ?>
+
+                    <p>Welcome,</p>
+                    <p><?php echo $_SESSION['username']; ?></p>
+
+                    
+                    <div class="btn-group">
+                        <button class="btn btn-sample" type="button">
+                            <a href="home.php?logout='1'" style="color: #aaaaaa;">logout</a>
+                        </button>
+                    </div>
+
+                <?php endif ?>
+            </div>
+        </nav>
+
+    <div class="container">
+        <br>
+        <h1>About Us</h1>
+        <p>Konekin is Social Media Platform Exclusive for student of Institute Teknologi Sepuluh Nopember.</p>
+        <br><br><br>
+
+        <h5>Developers:</h5>
+        <p>Irshad</p>
+        <p>Taufiq</p>
+        <p>Jihad</p>
     </div>
 
 

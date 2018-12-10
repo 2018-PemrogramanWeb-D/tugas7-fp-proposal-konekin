@@ -36,57 +36,52 @@
     
     
         <nav class="navbar navbar-expand-lg">
+
             <div class="container col-sm-10">
+
                 <a href = "home.php" class="navbar-brand" href="home.php">Home</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
         
                 <div class="collapse navbar-collapse" id="navbarsExample07">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Faculties</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown07">
-                                <h1 class="dropdown-header">Faculties</h1>
-                                <a class="dropdown-item" href="home.php?fak=1">FIA</a>
-                                <a class="dropdown-item" href="home.php?fak=2">FTI</a>
-                                <a class="dropdown-item" href="home.php?fak=3">FTE</a>
-                                <a class="dropdown-item" href="home.php?fak=4">FTSLK</a>
-                                <a class="dropdown-item" href="home.php?fak=5">FADP</a>
-                                <a class="dropdown-item" href="home.php?fak=6">FTK</a>
-                                <a class="dropdown-item" href="home.php?fak=7">FMKSD</a>
-                                <a class="dropdown-item" href="home.php?fak=8">FTIK</a>
-                                <a class="dropdown-item" href="home.php?fak=9">FBMT</a>
-                                <a class="dropdown-item" href="home.php?fak=10">FV</a>
-                            </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href = "aboutus.php" a class="nav-link" href="aboutus.php">About</a>
-                    </li>
-                </ul>
-                
-                
+
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Faculties</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdown07">
+                                    <h1 class="dropdown-header">Faculties</h1>
+                                    <a class="dropdown-item" href="home.php?fak=1">FIA</a>
+                                    <a class="dropdown-item" href="home.php?fak=2">FTI</a>
+                                    <a class="dropdown-item" href="home.php?fak=3">FTE</a>
+                                    <a class="dropdown-item" href="home.php?fak=4">FTSLK</a>
+                                    <a class="dropdown-item" href="home.php?fak=5">FADP</a>
+                                    <a class="dropdown-item" href="home.php?fak=6">FTK</a>
+                                    <a class="dropdown-item" href="home.php?fak=7">FMKSD</a>
+                                    <a class="dropdown-item" href="home.php?fak=8">FTIK</a>
+                                    <a class="dropdown-item" href="home.php?fak=9">FBMT</a>
+                                    <a class="dropdown-item" href="home.php?fak=10">FV</a>
+                                </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href = "aboutus.php" a class="nav-link" href="aboutus.php">About</a>
+                        </li>
+                    </ul>
 
                 </div>
+                
             </div>
             <div class="container col-sm-2">
                 <?php if (isset($_SESSION['username'])) : ?>
-                    <pre>Welcome,</pre>
+
+                    <p>Welcome,</p>
                     <p><?php echo $_SESSION['username']; ?></p>
 
                     
                     <div class="btn-group">
-                        <button class="btn btn-sample btn-sm" type="button">
-                            <a href="home.php?logout='1'" style="color: #5a006a;">logout</a>
+                        <button class="btn btn-sample" type="button">
+                            <a href="home.php?logout='1'" style="color: #aaaaaa;">logout</a>
                         </button>
-                        <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
                     </div>
 
                 <?php endif ?>
@@ -94,7 +89,7 @@
         </nav>
 
 
-    <div class="container">
+    <!-- <div class="container"> -->
         <div class="row content">
             <div class="col-sm-2">
                 <nav>
@@ -163,7 +158,9 @@
                     ?>
                     </h4>
                     <p><?php echo $row[2]; ?></p>
+                    <hr>
                     <?php endif; ?>
+                    
                 <?php endforeach; ?>
 
                     <?php else: ?>
@@ -211,14 +208,15 @@
                         ?>
                         </h4>
                         <p><?php echo $row[2]; ?></p>
-
+                    <hr>
                     <?php endforeach; ?>
 
                 <?php endif; ?>
             </div>
+            
         </div>
 
-    </div>
+    <!-- </div> -->
 
     
 
