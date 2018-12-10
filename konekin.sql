@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Nov 2018 pada 05.13
+-- Waktu pembuatan: 10 Des 2018 pada 18.15
 -- Versi server: 10.1.35-MariaDB
 -- Versi PHP: 7.2.9
 
@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `post` (
   `id_post` int(10) NOT NULL,
-  `fk_nrp` varchar(14) NOT NULL,
-  `judul_post` varchar(50) NOT NULL,
-  `isi_post` text NOT NULL
+  `fk_username` varchar(25) NOT NULL,
+  `isi_post` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -51,15 +51,6 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user`
---
-
-INSERT INTO `user` (`fullname`, `nrp`, `gender`, `fakultas`, `username`, `password`) VALUES
-('Irshad Mohammad Rasyidi', '05111740000046', 1, 8, 'qwe', '202cb962ac59075b964b07152d234b70'),
-('tyoq', '1', 2, 1, 'tyo', 'd6a4740b2da6818f9d2da4fba80a72bf'),
-('dhika', '2', 1, 7, 'dhika', '0d2fab94da6704708f8eabf28dc68719');
-
---
 -- Indexes for dumped tables
 --
 
@@ -68,7 +59,7 @@ INSERT INTO `user` (`fullname`, `nrp`, `gender`, `fakultas`, `username`, `passwo
 --
 ALTER TABLE `post`
   ADD PRIMARY KEY (`id_post`),
-  ADD KEY `fk_nrp` (`fk_nrp`);
+  ADD KEY `fk_nrp` (`fk_username`);
 
 --
 -- Indeks untuk tabel `user`
@@ -85,16 +76,6 @@ ALTER TABLE `user`
 --
 ALTER TABLE `post`
   MODIFY `id_post` int(10) NOT NULL AUTO_INCREMENT;
-
---
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
---
-
---
--- Ketidakleluasaan untuk tabel `post`
---
-ALTER TABLE `post`
-  ADD CONSTRAINT `fk_nrp` FOREIGN KEY (`fk_nrp`) REFERENCES `user` (`nrp`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
